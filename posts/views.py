@@ -1,26 +1,32 @@
-from rest_framework import status
-from rest_framework.generics import ListCreateAPIView
-from rest_framework.response import Response
-from .models import Post
+from rest_framework import filters
+from rest_framework.viewsets import ModelViewSet
+from .models import Post, Image, Customer
+from django_filters.rest_framework import DjangoFilterBackend
+from .serializers import PostSerializer, ImageSerializer, CustomerSerializer
+from .filters import PostFilter
+from .custom_permissions import IsPostOwner, IsImageOwner
 
-from .serializers import PostSerializer
-from rest_framework.permissions import IsAuthenticated
+class PostViewSet(ModelViewSet):
+    permission_classes = [IsPostOwner]
 
+    filter_backends = [DjangoFilterBackend,
+                       filters.SearchFilter]
 
-class PostList(ListCreateAPIView):
+    filterset_class = PostFilter
+    search_fields = ['title', 'content']
+
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = (IsAuthenticated,)
 
-    def ShowPost(self, request):
-        results = Post.objects.all()
-        serializer  = PostSerializer(results, many=True)
-        return Response(serializer .data)
+    def perform_create(self, serializer):
+        serializer.save(customer=self.request.user.customer)
 
+class ImageViewSet(ModelViewSet):
+    permission_classes = [IsImageOwner]
 
-    def SavePost(self, request):
-        serializer  = PostSerializer(data=request.data)
-        if serializer .is_valid():
-            serializer .save()
-            return Response(serializer .data, status=status.HTTP_201_CREATED)
-        return Response(serializer .data, status=status.HTTP_400_BAD_REQUEST)
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+
+class CustomerViewSet(ModelViewSet):
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
