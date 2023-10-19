@@ -1,11 +1,7 @@
 from django.contrib import admin
-from .models import Post,Image, Customer
+from .models import Post
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'created_at')
+    list_display = ('title', 'content','created_at')
 
 admin.site.register(Post, PostAdmin)
-
-admin.site.register(Customer)
-
-admin.site.register(Image)
