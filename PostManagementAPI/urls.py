@@ -19,6 +19,16 @@ from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.conf import settings
+from django.conf.urls.static import static
+from rest_framework import routers
+from posts.views import ImageViewSet, PostViewSet, CustomerViewSet
+
+router = routers.DefaultRouter()
+router.register(r'images', ImageViewSet)
+router.register(r'posts', PostViewSet)
+router.register(r'customers', CustomerViewSet)
+
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -36,6 +46,8 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('posts.urls')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/posts/', include(router.urls)),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
