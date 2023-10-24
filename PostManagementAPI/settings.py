@@ -21,8 +21,7 @@ env.read_env()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-nq)q04vt-d4b0h4$p-apqojglbez#@a2xwu)r_wrmhgekb7-44'
+# SECURITY WARNING: keep the secret key used in production secret
 SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
