@@ -93,9 +93,6 @@ DATABASES = {
         'NAME': env('DATABASE_NAME'),
         'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASS'),
-        # 'NAME': 'postdb',
-        # 'USER': 'root',
-        # 'PASSWORD': 'mypassword',
         'HOST': 'localhost',
         'PORT': '3306',
     }
