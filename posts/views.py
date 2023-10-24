@@ -6,6 +6,7 @@ from .serializers import PostSerializer, ImageSerializer, CustomerSerializer
 from .filters import PostFilter
 from .custom_permissions import IsPostOwner, IsImageOwner
 
+
 class PostViewSet(ModelViewSet):
     permission_classes = [IsPostOwner]
 
@@ -21,11 +22,13 @@ class PostViewSet(ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(customer=self.request.user.customer)
 
+
 class ImageViewSet(ModelViewSet):
     permission_classes = [IsImageOwner]
 
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
+
 
 class CustomerViewSet(ModelViewSet):
     queryset = Customer.objects.all()

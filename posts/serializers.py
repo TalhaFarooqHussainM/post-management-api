@@ -1,6 +1,8 @@
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 from rest_framework import serializers
 from .models import Post, Image, Customer
-from django.contrib.auth.models import User
+
 
 class CustomerSerializer(serializers.ModelSerializer):
     email = serializers.EmailField()
@@ -9,10 +11,14 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         fields = ('user', 'email')
 
-    def validate_email(self, value):
-        if not value.endswith('@gmail.com'):
-            raise serializers.ValidationError('Email must end with @gmail.com')
-        return value
+    def email(self, value):
+        try:
+            validate_email(value)
+            return True
+        except ValidationError:
+            return False
+
+
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
@@ -24,8 +30,10 @@ class ImageSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("You do not have permission to perform this action.")
         return post
 
+
 class PostSerializer(serializers.ModelSerializer):
     image = ImageSerializer(many=True, read_only=True)
+
     class Meta:
         model = Post
         fields = ['id', 'customer', 'title', 'content', 'image']

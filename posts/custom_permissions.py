@@ -1,5 +1,6 @@
 from rest_framework import permissions
 
+
 class IsPostOwner(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         if request.method == "POST" and obj.customer.user == request.user:
@@ -7,6 +8,7 @@ class IsPostOwner(permissions.BasePermission):
         elif request.method in permissions.SAFE_METHODS:
             return True
         return obj.customer.user == request.user
+
 
 class IsImageOwner(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
