@@ -1,5 +1,3 @@
-from django.core.validators import validate_email
-from django.core.exceptions import ValidationError
 from rest_framework import serializers
 from .models import Post, Image, Customer
 
@@ -10,13 +8,6 @@ class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
         fields = ('user', 'email')
-
-    def email(self, value):
-        try:
-            validate_email(value)
-            return True
-        except ValidationError:
-            return False
 
 
 class ImageSerializer(serializers.ModelSerializer):
