@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Image, Customer
+from posts.models import Post, Image, Customer
 
 
 class CustomerSerializer(serializers.ModelSerializer):

@@ -1,8 +1,8 @@
 from rest_framework import filters
 from rest_framework.viewsets import ModelViewSet
-from .models import Post, Image, Customer
+from posts.models import Post, Image, Customer
 from django_filters.rest_framework import DjangoFilterBackend
-from .serializers import PostSerializer, ImageSerializer, CustomerSerializer
+from posts.serializers import PostSerializer, ImageSerializer, CustomerSerializer
 from .filters import PostFilter
 from .custom_permissions import IsPostOwner, IsImageOwner
 

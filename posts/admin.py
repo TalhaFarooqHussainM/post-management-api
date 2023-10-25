@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Image, Customer
+from posts.models import Post, Image, Customer
 
 
 class PostAdmin(admin.ModelAdmin):
