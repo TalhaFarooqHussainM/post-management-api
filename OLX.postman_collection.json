@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "8f7e63d6-6942-4274-9ef4-7f9d7a0b2363",
+		"name": "OLX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29352031"
+	},
+	"item": [
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/posts/images/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/cuty computer/OneDrive/Pictures/f.png"
+								},
+								{
+									"key": "post",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/images/31/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"images",
+								"31",
+								""
+							]
+						},
+						"description": "StartFragmenthttp://127.0.0.1:8000/api/posts/images/33/EndFragment  \n  \nStartFragmenthttp://127.0.0.1:8000/api/posts/images/EndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/images/32/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/cuty computer/OneDrive/Pictures/superman t shirt.jpg"
+								},
+								{
+									"key": "post",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/images/32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"images",
+								"32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/images/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/cuty computer/OneDrive/Pictures/superman t shirt.jpg"
+								},
+								{
+									"key": "post",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/images/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"images",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/images/32/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/images/32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"images",
+								"32",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/posts/posts/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": 2,\r\n    \"title\": \"First and most common Post\",\r\n    \"content\": \"My secondytuyf dfgrf day 12 rrr at zeroslip and then third day shjuief\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"posts",
+								""
+							]
+						},
+						"description": "StartFragmenthttp://127.0.0.1:8000/api/posts/posts/23/\n\nStartFragmenthttp://127.0.0.1:8000/api/posts/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/posts/23/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/posts/23/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"posts",
+								"23",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/posts/23/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": 2,\r\n    \"title\": \"First and most common Post\",\r\n    \"content\": \"My secondytuyf dfgrf day 12 rrr at zeroslip and then third day shjuief\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/posts/23/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"posts",
+								"23",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/posts/23/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/posts/23/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"posts",
+								"23",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/posts/customers/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"1\",\r\n    \"email\": \"talha@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/customers/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"customers",
+								""
+							]
+						},
+						"description": "StartFragment[http://127.0.0.1:8000/api/posts/customers/EndFragment](http://127.0.0.1:8000/api/posts/customers/EndFragment)\n\nStartFragmenthttp://127.0.0.1:8000/api/posts/customers/1/EndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/customers/1/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"1\",\r\n    \"email\": \"talha@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/customers/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"customers",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/customers/1/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"1\",\r\n    \"email\": \"talha@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/customers/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"customers",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/posts/customers/3/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/customers/3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"customers",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts Filter",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/posts/posts/?title=d&content=my",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "talha",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/posts/?title=d&content=my",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"posts",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "d"
+								},
+								{
+									"key": "content",
+									"value": "my"
+								}
+							]
+						},
+						"description": "StartFragmenthttp://127.0.0.1:8000/api/posts/posts/?title=d&content=myEndFragment"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
